@@ -1,0 +1,523 @@
+-html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Sen", sans-serif;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    font-size: 30px;
+    color: #9e47f5;
+    max-height: 30px;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    z-index: 0;
+}
+
+.left-menu-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+.content-container {
+    margin-left: 50px;
+}
+
+.featured-content {
+    height: 50vh;
+    max-height: 50vh;
+    padding: 50px;
+    background-image: url('img/doctor.png');
+    font-family: 'Kanit', sans-serif;
+}
+
+.featured-title {
+    width: 200px;
+}
+
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+}
+
+.movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 250px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.movie-list-item-title {
+    background-color: rgba(90, 90, 90, 0);
+    opacity: 0;
+    padding: 0px;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 40px;
+    transition: 1s all ease-in-out;
+    text-align: center;
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color: #9e47f5;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.container.active {
+    background-color: #ffffff;
+}
+
+.movie-list-title.active {
+    color: black;
+}
+
+.navbar-container.active {
+    background-color: white;
+    color: black;
+}
+
+.navbar.active {
+    background-color: white;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: white;
+    color: black;
+}
+
+.navbar.responsive.active {
+    background-color: white;
+    color: black;
+}
+
+.navbar.responsive a.active {
+    background-color: white;
+    color: black;
+}
+
+.navbar.icon.active {
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 940px) {
+    .menu-container {
+        display: none;
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    z-index: 1;
+    top: 0;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .btn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #b5b5b5;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+    float: none;
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar a:hover,
+.dropdown:hover .btn {
+    background-color: #555555;
+    color: white;
+}
+
+.dropdown-menu a:hover {
+    background-color: #cccccc;
+    color: black;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar a:not(:first-child),
+    .dropdown .btn {
+        display: none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .navbar.responsive .dropdown {
+        float: none;
+    }
+    .navbar.responsive .dropdown-menu {
+        position: relative;
+    }
+    .navbar.responsive .dropdown .btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #fadeshow1 {
+        display: none;
+    }
+}
+
+.newcontainer {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+    padding: 100px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: #9e47f5;
+    width: 600px;
+    height: 1200px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.cardcontainer {
+    padding: 2px 16px;
+}
+
+.iframe-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.column {
+    float: left;
+    width: 620px;
+    padding: 20px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Sen", sans-serif;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Sen", sans-serif;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #9e47f5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Sen", sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: #eb6fbd;
+}
+
+.review {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    color: black;
+}
+
+:target {
+    background-color: #869efe;
+    transition: 1s all ease-in;
+}
+
+.submitreview {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+.newcontainer .submitreview button {
+    background-color: #9e47f5;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-family: "Sen", sans-serif;
+}
+
+.newcontainer .submitreview button a {
+    color: white;
+    text-decoration: none;
+}
+
+.update {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    color: black;
+    width: 350px;
+    height: 200px;
+    text-align: left;
+    margin: auto;
+}
+
+.readreview {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 20px;
+    color: black;
+    text-align: left;
+}
+
+.newcontainer .readreview button {
+    background-color: #9e47f5;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: "Sen", sans-serif;
+}
+
+.newcontainer .readreview button a {
+    color: white;
+    text-decoration: none;
+}
+
+.cardreview {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: #869efe;
+    width: 600px;
+    height: 400px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.columnreview {
+    float: left;
+    width: 620px;
+    padding: 20px;
+}
+
+.btnreview {
+    background-color: #9e47f5;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: "Sen", sans-serif;
+    text-decoration: none;
+}
+
+.btnreview a {
+    color: white;
+    text-decoration: none;
+}
+
+#pagination_controls {
+    text-align: center;
+}
+
+.newcontainer button {
+    background-color: #9e47f5;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-family: "Sen", sans-serif;
+}
+
+.newcontainer button a {
+    color: white;
+    text-decoration: none;
+}

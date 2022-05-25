@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+
+    <title>FeelFilm</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+<body>
+
+    <div class="navbar" id="nav">
+        <div>
+            <a href="index.html">
+                <h1 class="logo">FeelFilm</h1>
+            </a>
+
+            <a href="new.html">New</a>
+            <a href="popular.html">Popular</a>
+
+            <div class="dropdown">
+                <button class="btn">Categories 
+                        <i class="fa fa-caret-down"></i>
+                  		</button>
+                <div class="dropdown-menu">
+                    <a href="action.html">Action</a>
+                    <a href="comedies.html">Comedies</a>
+                    <a href="dramas.html">Dramas</a>
+                    <a href="romance.html">Romance</a>
+                    <a href="horror.html">Horror</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn">Streaming 
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                <div class="dropdown-menu">
+                    <a href="netflix.html">Netflix</a>
+                    <a href="disney.html">Disney+</a>
+                    <a href="hbo.html">HBO</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+
+    <div class="sidebar">
+        <a href="index.html"><i class="left-menu-icon fas fa-home"></i></a>
+        <a href="show.php"><i class="left-menu-icon fas fa-users"></i></a>
+        <a href="write.php"><i class="left-menu-icon fas fa-pen"></i></a>
+        <a href="login_form.html"><i class="left-menu-icon fas fa-edit"></i></a>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+
+            <div class="featured-content">
+                <br>
+                <br>
+                <h4> Feel Film เว็บไซต์ที่รวบรวม Reviews ของหนัง/ภาพยนตร์/ซีรีส์ ต่าง ๆ ไว้มากที่สุด</h4>
+                <h4>อัพเดทแพลตฟอร์มสตรีมหนังดังจากค่ายหนังทั่วทุกมุมโลก</h4>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kingsman.jpg" alt="kingsman">
+                            <span class="movie-list-item-title">The King's Man</span>
+                            <button class="movie-list-item-button"><a href="new.html#kingman">Read</a></button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/blackcrab.jpg" alt="blackcrab">
+                            <span class="movie-list-item-title">Black Crab</span>
+                            <button class="movie-list-item-button"><a href="new.html#blackcrab">Read</a></button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/oneofus.jpg" alt="oneofusislying">
+                            <span class="movie-list-item-title">One of Us Is Lying</span>
+                            <button class="movie-list-item-button"><a href="new.html#oneofus">Read</a></button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/junglecruise.jpg" alt="junglecruise">
+                            <span class="movie-list-item-title">Jungle Cruise</span>
+                            <button class="movie-list-item-button"><a href="new.html#junglecruise">Read</a></button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/wrathofman.jpg" alt="wrathofman">
+                            <span class="movie-list-item-title">Wrath of Man</span>
+                            <button class="movie-list-item-button"><a href="new.html#wrathofman">Read</a></button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bulgasal.jpg" alt="bulgasal">
+                            <span class="movie-list-item-title">Bulgasal</span>
+                            <button class="movie-list-item-button"><a href="new.html#bulgasal">Read</a></button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">POPULAR MOVIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/dune.jpg" alt="dune">
+                            <span class="movie-list-item-title">DUNE PART 1</span>
+                            <button class="movie-list-item-button"><a href="popular.html#dune">Read</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/godzilla.jpeg" alt="godzilla">
+                            <span class="movie-list-item-title">Godzilla vs. Kong</span>
+                            <button class="movie-list-item-button"><a href="popular.html#godzilla">Read</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/blackwidow.jpg" alt="black widow">
+                            <span class="movie-list-item-title">BLACK WIDOW</span>
+                            <button class="movie-list-item-button"><a href="popular.html#blackwidow">Read</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/moon.jpg" alt="moonfall">
+                            <span class="movie-list-item-title">Moonfall</span>
+                            <button class="movie-list-item-button"><a href="popular.html#moonfall">Read</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/notime.jpg" alt="no time to die">
+                            <span class="movie-list-item-title">NO TIME TO DIE</span>
+                            <button class="movie-list-item-button"><a href="popular.html#notimetodie">Read</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/fast9.jpg" alt="fast9">
+                            <span class="movie-list-item-title">Fast & Furious 9</span>
+                            <button class="movie-list-item-button"><a href="popular.html#fast">Read</a></button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">STREAMING</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <a href="netflix.html"><img class="movie-list-item-img" src="img/netflix.png" alt="Netflix"></a>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <a href="disney.html"><img class="movie-list-item-img" src="img/disney.png" alt="disney"></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="hbo.html"><img class="movie-list-item-img" src="img/hbo.png" alt="HBO"></a>
+                        </div>
+                    </div>
+                    <i id="fadeshow1" class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
