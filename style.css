@@ -521,3 +521,41 @@ input[type=submit]:hover {
     color: white;
     text-decoration: none;
 }
+/* เพิ่มตั้งแต่ตรงนี้ */
+
+@media screen and (max-width: 758px) {
+    .card {
+        width: 40%;
+        height: 130%
+    }
+}
+
+@media screen and (max-width: 758px) {
+    iframe {
+        width: 90%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    iframe {
+        width: 90%;
+    }
+}
+
+
+/*อันนี้แก้เลขอีกที ยังไม่ได้ปรับ*/
+
+@media screen and (max-width: 758px) {
+    .cardreview {
+        width: 40%;
+        height: 120%;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .update {
+        width: 80%;
+    }
+}
