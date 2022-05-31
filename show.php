@@ -1,5 +1,5 @@
 <?php
-$conn= mysqli_connect('us-cdbr-east-05.cleardb.net','ba80e18674956a','4d38549c','heroku_46f17315db8623b') 
+$conn= mysqli_connect('','','','') 
 or die("Error: " . mysqli_error($conn));
 mysqli_query($conn, "SET NAMES 'utf8' ");
 $query=mysqli_query($conn,"SELECT COUNT(id) FROM review");
