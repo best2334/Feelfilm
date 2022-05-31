@@ -74,10 +74,10 @@
 
 <?php
 	session_start();
-	define('DB_HOST', 'us-cdbr-east-05.cleardb.net');
-  define('DB_USER', 'ba80e18674956a');
-  define('DB_PASS', '4d38549c');
-  define('DB_NAME', 'heroku_46f17315db8623b');
+	define('DB_HOST', '');
+  define('DB_USER', '');
+  define('DB_PASS', '');
+  define('DB_NAME', '');
 
   $objCon = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
   mysqli_set_charset($objCon, "utf8");
